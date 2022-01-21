@@ -1,24 +1,5 @@
-# README
+# rails-101
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Repositório para ser utilizado dentro do bootcampa de Rails
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ambiente criado seguindo [esse tutorial](https://hackmd.io/@XBgk0kxlRnWrc48GVpMRVA/HJQeklI6t)
