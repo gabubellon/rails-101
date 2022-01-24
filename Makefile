@@ -8,4 +8,4 @@ down:
 build:
 	docker-compose build
 
-build_up: build up
+build-up: build up

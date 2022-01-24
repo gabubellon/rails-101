@@ -2,6 +2,7 @@ version: "3"
 
 services:
   web:
+    container_name: web
     build:
       context: .
       dockerfile: Dockerfile
@@ -15,6 +16,7 @@ services:
       - database
 
   database:
+    container_name: database  
     image: 'postgres:12.1-alpine'
     volumes:
       - postgres:/var/lib/postgresql/data
