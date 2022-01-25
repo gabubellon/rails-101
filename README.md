@@ -5,6 +5,7 @@ Repositório para ser utilizado dentro do bootcampa de Rails
 Ambiente criado seguindo [esse tutorial](https://hackmd.io/@XBgk0kxlRnWrc48GVpMRVA/HJQeklI6t)
 
 * [Aula 1](https://hackmd.io/UWCBZXZ-QvSW_zS_5_Bfog)
+* [Aula 2](https://hackmd.io/RcwgP49yQlOV7sOdAaX2UQ)
 
 
 ## para executar
