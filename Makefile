@@ -9,3 +9,6 @@ build:
 	docker-compose build
 
 build-up: build up
+
+migrate:
+	docker-compose exec web rails db:migrate
