@@ -10,6 +10,14 @@ import Turbolinks from "turbolinks"
 require("jquery")
 require("bootstrap")
 
+document.addEventListener('turbolinks:load', () => {
+    $('.custom-file-input').on('change',function(){
+      const fileName = $(this).val().split('\\');
+  
+      $(this).next('.custom-file-label').html(fileName[fileName.length - 1]);
+    })
+  })
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
