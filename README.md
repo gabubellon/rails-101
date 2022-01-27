@@ -7,6 +7,7 @@ Ambiente criado seguindo [esse tutorial](https://hackmd.io/@XBgk0kxlRnWrc48GVpMR
 * [Aula 1](https://hackmd.io/UWCBZXZ-QvSW_zS_5_Bfog)
 * [Aula 2](https://hackmd.io/RcwgP49yQlOV7sOdAaX2UQ)
 * [Aula 3](https://hackmd.io/fbYkNFBOQk-Yl2MiWkw3gw)
+* [Aula 4](https://hackmd.io/uOs-ccO8QgypgwaP4LbKKA)
 
 
 ## para executar
