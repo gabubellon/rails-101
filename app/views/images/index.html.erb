@@ -17,8 +17,8 @@
         <td><%= image_tag url_for image.file.representation(resize_to_limit: [52, 52]) %></td>
         <td>
           <div class="btn-group">
-            <%= button_to 'Detalhes', image, class: 'btn btn-primary' %>
-            <%= button_to 'Editar', edit_image_path(image), class: 'btn btn-warning' %>
+            <%= button_to 'Detalhes', image, class: 'btn btn-primary', method: :get%>
+            <%= button_to 'Editar', edit_image_path(image), class: 'btn btn-warning', method: :get%>
             <%= button_to 'Deletar', image, method: :delete, data: { confirm: 'Certeza?' }, class: 'btn btn-danger' %>
           </div>
         </td>
