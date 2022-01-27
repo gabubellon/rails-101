@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: %i[show edit update destroy]
+  skip_before_action :authenticate_user!, only: %i[show_my_images] # Add a Skip to device auth when call show_my_images
 
   def index
     @images = current_user.images
@@ -38,6 +39,11 @@ class ImagesController < ApplicationController
     redirect_to images_url, notice: 'Imagem deletada!'
   end
 
+  # Define a controler has return a json with all images
+  def show_my_images
+    render json: Image.all.map { |image| { title: image.title, id: image.id } }
+  end
+
   private
 
   def set_image
@@ -48,3 +54,4 @@ class ImagesController < ApplicationController
     params.require(:image).permit(:title, :file, :user_id)
   end
 end
+
