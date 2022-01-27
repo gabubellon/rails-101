@@ -1,43 +1,62 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h1>Perfil</h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="form-group">
+    <%= f.label :name, 'Nome'  %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control', placeholder: 'Nome' %>
   </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+  <div class="form-group">
+    <%= f.label :lastname,'Sobrenome'  %>
+    <%= f.text_field :lastname, autofocus: true, autocomplete: "lastname", class: 'form-control', placeholder: 'Sobrenome' %>
+  </div>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+  <div class="form-group">
+    <%= f.label :nickname, 'Nome de Usuário' %>
+    <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: 'form-control', placeholder: 'Nome de usuário' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :birthdate, 'Data de Nascimento' %>
+    <%= f.date_field :birthdate, autofocus: true, autocomplete: "birthdate", class: 'form-control', placeholder: 'Data de Nascimento' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email, 'Email' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: 'Digite seu email' %>
+    <small id="emailHelp" class="form-text text-muted">Não iremos compartilhar seus dados com ninguém.</small>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Email ainda não confirmado: <%= resource.unconfirmed_email %></div>
     <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="form-group">
+    <%= f.label :password, 'Nova Senha' %> <i>(deixe em branco se não quiser alterar)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+    <% if @minimum_password_length %>
+      <small id="pwHelp" class="form-text text-muted">Mínimo de <%= @minimum_password_length %> characteres</small>
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  <div class="form-group">
+    <%= f.label :password_confirmation, 'Confirmação de Nova Senha' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
+  <div class="form-group">
+    <%= f.label :current_password,'Senha Atual' %>
+    <%= f.password_field :current_password, autocomplete: "current-password", class: 'form-control' %>
+  </div>
+
+  <div class="btn-group d-flex">
+    <%= f.submit "Atualizar Dados", class: 'btn btn-success' %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<h1 class="text-center">Cancelar Conta</h1>
+<%= button_to 'Excluir Conta', registration_path(resource_name), data: { confirm: "Tem Certeza ?" }, method: :delete, class: 'btn btn-danger' %>
+<%= link_to "Voltar", :back %>
