@@ -10,6 +10,7 @@ Ambiente criado seguindo [esse tutorial](https://hackmd.io/@XBgk0kxlRnWrc48GVpMR
 * [Aula 4](https://hackmd.io/uOs-ccO8QgypgwaP4LbKKA)
 * Extra 01 - Add Novo Campos no Usuárui
 * Extra 02 - GET simples de API
+* [Aula 5](https://hackmd.io/zhvIcXDfS-O1RtBGFS2beQ?view)
 
 
 ## para executar

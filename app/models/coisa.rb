@@ -1,0 +1,2 @@
+class Coisa < ApplicationRecord
+end

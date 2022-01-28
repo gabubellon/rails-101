@@ -12,3 +12,6 @@ build-up: build up
 
 migrate:
 	docker-compose exec web rails db:migrate
+
+rspec:
+	docker-compose exec web rspec $(FILE)
