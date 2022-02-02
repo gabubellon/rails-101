@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :images
   devise_for :users
   root 'home#index', as: :home #Rotas no rails com uma definição de atalhos
